@@ -12,35 +12,40 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">My Work</a></li>
-                <li><a href="#">Get in Touch</a></li>
+                <li><a href="#welcome">Morgan Hamet</a></li>
+                <div class="links">
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">My Work</a></li>
+                    <li><a href="#contact">Get in Touch</a></li>
+                </div>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="welcome">
-            <h1>Hi! I'm <span class="emphasis">Morgan.</span>
-                I am <span class="emphasis">self taught</span>
-                and interested in <span class="emphasis">front&#8209;end development.</span>
-            </h1>
+        <a id="welcome">
+            <section class="welcome">
+                <h1>Hi! I'm <span class="emphasis">Morgan.</span>
+                    I am into <span class="emphasis">front&#8209;end</span> development
+                    and <span class="emphasis">UX design.</span>
+                </h1>
+        </a>
         </section>
-        <section class="about-me">
-            <h2>About Me</h2>
-            <hr>
-            <div class="me-info">
-                <div class="me-text">
-                    <p>Former technical writer and QA analyst with experience testing the patient-facing web portal.
-                        I'm into design, foreign languages, and learning about different parts of the world.
+        <a id="about-me">
+            <section class="about-me">
+                <div class="me-info">
+                   <h2>About Me</h2>
+                    <p>Former technical writer and QA analyst with experience testing the patient&#8209;facing web portal.
+                        I'm into design, foreign languages, and learning about different parts of the world, and I
+                        can spot a typo from a mile away.
                     </p>
-                    <p> And web programming, but you probably figured that out.</p>
                 </div>
-                <img src="./assets/images/me-circled.png" alt="">
-            </div>
-        </section>
+                <img src="./assets/images/me.png" alt="">
+            </section>
+        </a>
         <section class="work">
-            <h2>My Work</h2>
-            <hr>
+            <a id="projects">
+                <h2>My Work</h2>
+            </a>
             <div class="projects">
                 <figure class="project">
                     <div class="screenshot">-</div>
@@ -105,24 +110,19 @@
             </div>
         </section>
         <section class="contact">
-            <h2>Get in Touch</h2>
+            <a id="contact">
+                <h2>Get in Touch</h2>
+            </a>
             <hr>
             <div class="contact-info-container">
-                <div class="contact-info">
-                    <a href="#">Email</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">LinkedIn</a>
-                </div>
-                <div class="extra">
-                    <p>I'm based in the U.S., but I'm open to moving wherever &#8212; really!
-                        I was all set to move to Taiwan to teach English, but then COVID hit.
-                        Now I've changed routes, but my urge to explore has only strengthened.
-                        I think the engine behind self-betterment is trying new things.
-                    </p>
-                    <p>
-                       Well, if you're still here, thanks for reading and I look forward to hearing from you soon!
-                    </p>
-                </div>
+                <ul class="contact-info">
+                    <li>morganhamet@gmail.com</li>
+                    <div class="icons">
+                        <a target="_blank" href="https://github.com/hametm"><li><img src="./assets/images/github-white.png" alt="github"></li></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/morgan-hamet/"><li><img src="./assets/images/linkedin-white.png" alt="linkedin"></li></a>
+                    </div>
+                </ul>
+                <p>I'm based in the U.S., but I'm open to moving wherever. Really.</p>
             </div>
         </section>
     </main>
