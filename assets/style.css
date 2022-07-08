@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Roboto:wght@400;700&family=Space+Grotesk:wght@700&display=swap');
+
+body {
+    /* display: grid;
+    grid-template-rows: auto;
+    min-height: 100vh; */
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(149, 176, 191);
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    
+}
+
+.about-me {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-text {
+    margin-top: 13%;
+    margin-left: 20%;
+}
+
+.about-me p {
+    font-size: 1.25rem;
+}
+
+.about-me h1 {
+    font-size: 5rem;
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: .5rem;
+}
