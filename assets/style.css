@@ -100,7 +100,7 @@ section {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -120,10 +120,14 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-between;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    align-items: center;
     width: 100%;
     padding: 0;
+    margin: 1rem 4rem;
+}
+
+nav li, nav a {
+    margin: 0;
 }
 
 nav a {
@@ -136,16 +140,35 @@ nav a:hover {
     border-bottom: 1px solid var(--blue);
 }
 
-nav a:active {
-    color: var(--blue);
+.right-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.language {
+    display: flex;
+    gap: 2rem;
+}
+
+.language img {
+    max-width: 40px;
+}
+
+.language a:hover {
+    border: none;
+}
+
+.selected-lang {
     border-bottom: 1px solid var(--blue);
 }
 
 /* home */
 
 .home {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -173,12 +196,6 @@ nav a:active {
 .home img {
     object-fit: contain;
     max-width: 300px;
-}
-
-.home {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    min-height: 100vh;
 }
 
 /* About Me */
@@ -351,16 +368,17 @@ footer {
 
 @media (max-width: 480px) {
 
-    /* nav ul {
-        margin: 1rem;
-    } */
+    nav ul {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 
-    nav {
+    .links {
         display: none;
     }
 
     .home h1 {
-        font-size: 3rem;
+        font-size: 2.75rem;
     }
 
     h2 {
@@ -475,13 +493,7 @@ footer {
         margin-right: 2rem;
     }
 
-    nav ul {
-        margin: 1rem;
-    }
 
-    .links {
-        gap: 0;
-    }
 
     section {
         padding: 4rem;
@@ -505,10 +517,6 @@ footer {
         gap: 3rem;
         justify-content: center;
         margin: 4rem 0 0 0;
-    }
-
-    .projects-header {
-        margin-right: 1rem;
     }
 
     .screenshot:hover {
