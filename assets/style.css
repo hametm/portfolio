@@ -113,21 +113,20 @@ nav {
     gap: 3rem;
 }
 
-/* .selected {
-    color: yellow;
-} */
-
 nav ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     padding: 0;
-    margin: 1rem 4rem;
+    margin: .75rem 4rem;
 }
 
 nav li, nav a {
     margin: 0;
+}
+
+nav li {
+    margin-top: 12px;
 }
 
 nav a {
@@ -135,7 +134,7 @@ nav a {
     /* transition: border-bottom .5s ease-in; */
 }
 
-nav a:hover {
+nav li:hover {
     color: var(--blue);
     border-bottom: 1px solid var(--blue);
 }
@@ -143,7 +142,6 @@ nav a:hover {
 .right-side {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 4rem;
 }
 
