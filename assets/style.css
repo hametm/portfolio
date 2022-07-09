@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Roboto:wght@400;700&family=Space+Grotesk:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Libre+Franklin:wght@700&family=Patua+One&display=swap');
 
 @keyframes slide-down {    
     from {
@@ -39,31 +39,33 @@
 
 :root {
     --yellow: rgb(255, 234, 0);
-    --blue: rgb(22, 138, 170);
+    --blue: rgb(58, 167, 181);
+    --background: #fbf7f5;
 }
 
 html {
     scroll-behavior: smooth;
-    margin: 0;
 }
 
 body {
     /* display: grid;
     grid-template-rows: auto;
     min-height: 100vh; */
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--blue);
-    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+
+    background-color: var(--background);
+    color: grey;
 }
 
 h2 {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Patua One', cursive;
     font-size: 3rem;
     margin: 0;
 }
 
 #about-me:hover, #projects:hover, #contact:hover {
-    color: white;
+    color: grey;
 }
 
 p {
@@ -100,7 +102,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--blue);
+    background-color: var(--background);
 }
 
 .links {
@@ -118,11 +120,13 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: grey;
+    transition: border-bottom .5s ease-in;
 }
 
 nav a:hover {
-    color: var(--yellow);
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
 }
 
 
@@ -134,11 +138,10 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: white;
 }
 
 .emphasis {
-    color: var(--yellow);
+    color: var(--blue);
 }
 
 .welcome h1 {
@@ -170,10 +173,15 @@ nav a:hover {
     min-height: 90vh;
     padding-top: 4rem;
     display: grid;
-    gap: 6rem;
     grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
     font-size: 1.35rem;
     margin: 3rem 0;
+}
+
+.me-info {
+    margin-bottom: 7rem;
 }
 
 .about-me img {
@@ -189,10 +197,24 @@ nav a:hover {
 
 .projects {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     justify-content: center;
     margin: 4rem 0;
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5rem;
+    margin-right: 6rem;
+}
+
+.projects-header hr {
+    width: 75%;
+    color: grey;
+    margin-left: 0;
 }
 
 .projects h3 {
@@ -205,21 +227,21 @@ nav a:hover {
 }
 
 .project {
-    display: grid;
-    grid-template-columns: minmax(200px, 800px) minmax(200px, 400px);
-    gap: 2rem;
-}
-
-.screenshot:hover {
-    box-shadow:
-        0 0 0 4px var(--blue),
-        0 0 0 6px var(--yellow);
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .screenshot {
     background-color: rgb(232, 232, 232);
     height: 400px;
+    transition: box-shadow .2s ease-out;
+}
+
+.screenshot:hover {
+    box-shadow:
+        0 0 0 4px var(--background),
+        0 0 0 6px var(--blue);
+    cursor: pointer;
 }
 
 .description {
@@ -241,6 +263,7 @@ nav a:hover {
 
 .title-container h3 {
     margin: 0;
+    font-size: 1.5rem;
 }
 
 .contact-info {
@@ -275,21 +298,29 @@ nav a:hover {
 }
 
 .contact a {
-    color: white;
+    color: grey;
 }
 
 .contact a:hover {
-    color: var(--yellow);
+    color: var(--blue);
 }
 
 .contact img {
     max-width: 300px;
 }
 
+/* Footer */
+
 footer {
-    text-align: center;
-    padding: .5rem;
-    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    color: white;
+    padding: .75rem;
+    box-shadow:
+        0 0 0 4px var(--yellow),
+        0 0 0 8px rgb(239, 170, 246);
 }
 
 /* Smartphone */
@@ -345,7 +376,7 @@ footer {
 
     .projects {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));        
         gap: 3rem;
         justify-content: center;
         margin: 1rem 0 0 0;
@@ -353,6 +384,10 @@ footer {
 
     .project:hover {
         box-shadow: none;
+    }
+
+    .projects-header {
+        margin-right: 2rem;
     }
 
     .contact-info-container {
@@ -377,11 +412,7 @@ footer {
     }
 
     a:hover {
-        color: white;
-    }
-
-    h3 {
-        font-size: 1.65rem;
+        color: var(--blue);
     }
 
     nav ul {
@@ -400,16 +431,20 @@ footer {
         font-size: 3.7rem;
     }
 
-    .about-me {
-        min-height: auto;
-    }
-
     .about-me img {
         max-width: 400px;
     }
 
     .me-info {
         margin: 2rem 0 0 0;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));        
+        gap: 3rem;
+        justify-content: center;
+        margin: 4rem 0 0 0;
     }
 
     .screenshot:hover {
