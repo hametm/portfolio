@@ -41,6 +41,7 @@
     --yellow: rgb(255, 234, 0);
     --blue: rgb(58, 167, 181);
     --background: #fbf7f5;
+    --text: rgb(73, 73, 73);
 }
 
 html {
@@ -55,7 +56,7 @@ body {
     margin: 0;
 
     background-color: var(--background);
-    color: grey;
+    color: var(--text);
 }
 
 h2 {
@@ -65,7 +66,7 @@ h2 {
 }
 
 #about-me:hover, #projects:hover, #contact:hover {
-    color: grey;
+    color: var(--text);
 }
 
 p {
@@ -130,7 +131,7 @@ nav li {
 }
 
 nav a {
-    color: grey;
+    color: var(--text);
     /* transition: border-bottom .5s ease-in; */
 }
 
@@ -243,7 +244,7 @@ nav li:hover {
 
 .projects-header hr {
     width: 100%;
-    color: grey;
+    color: var(--text);
     margin-left: 0;
 }
 
@@ -263,8 +264,32 @@ nav li:hover {
 
 .screenshot {
     background-color: rgb(232, 232, 232);
-    height: 400px;
+    height: max(27vw, 200px);
+    width: max(40vw, 300px);
     transition: box-shadow .2s ease-out;
+    display: flex;
+    align-items: center;
+}
+
+.project1 {
+    background-image: url(images/alphabet-store.png);
+    background-position: bottom right;
+    background-size: 155%;
+    background-repeat: no-repeat;
+}
+
+.project2 {
+    background-image: url(images/smileship.png);
+    background-position: bottom;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+
+.project3 {
+    background-image: url(images/owen-wilson.png);
+    background-position: center;
+    background-size: 145%;
+    background-repeat: no-repeat;
 }
 
 .screenshot:hover {
@@ -279,6 +304,10 @@ nav li:hover {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+}
+
+.description p {
+    margin: 0;
 }
 
 .title-container {
@@ -325,7 +354,7 @@ nav li:hover {
 }
 
 .contact a {
-    color: grey;
+    color: var(--text);
 }
 
 .contact a:hover {
@@ -516,6 +545,15 @@ footer {
         justify-content: center;
         margin: 4rem 0 0 0;
     }
+
+    .screenshot {
+        width: 100%;
+        /* height: 100%; */
+    }
+
+    /* .screenshot-link {
+        height: 300px;
+    } */
 
     .screenshot:hover {
         box-shadow: none;
