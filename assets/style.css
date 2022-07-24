@@ -135,7 +135,7 @@ nav a {
     /* transition: border-bottom .5s ease-in; */
 }
 
-nav li:hover {
+nav li:hover, .selected-link {
     color: var(--blue);
     border-bottom: 1px solid var(--blue);
 }
