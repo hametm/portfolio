@@ -38,13 +38,28 @@ sectionObserver.observe(contactHeader);
 
 // Adding styles to the current link
 
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        links.forEach(link => {
-            link.classList.remove("selected-link");
-        });
-        link.classList.add("selected-link");
+const setSelectedLink = (element) => {
+    links.forEach(link => {
+        link.classList.remove("selected-link");
     });
+    element.classList.add("selected-link");
+}
+
+links.forEach(link => {
+    link.addEventListener("click", () => setSelectedLink(link));
 });
+
+const setLinkStyle = (entry, link) => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) setSelectedLink(link)});
+    }, { threshold: [1] });
+    observer.observe(entry);
+}
+
+setLinkStyle(homeHeader, homeLink);
+setLinkStyle(aboutMeHeader, aboutMeLink);
+setLinkStyle(workHeader, workLink);
+setLinkStyle(contactHeader, contactLink);
 
 
