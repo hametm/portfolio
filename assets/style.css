@@ -132,7 +132,6 @@ nav li {
 
 nav a {
     color: var(--text);
-    /* transition: border-bottom .5s ease-in; */
 }
 
 nav li:hover, .selected-link {
@@ -155,8 +154,9 @@ nav li:hover, .selected-link {
     max-width: 40px;
 }
 
-.language a:hover {
-    border: none;
+.language img:hover {
+    border-bottom: 1px solid var(--blue);
+
 }
 
 .selected-lang {
