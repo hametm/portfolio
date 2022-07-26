@@ -49,12 +49,8 @@ html {
 }
 
 body {
-    /* display: grid;
-    grid-template-rows: auto;
-    min-height: 100vh; */
     font-family: 'Inter', sans-serif;
     margin: 0;
-
     background-color: var(--background);
     color: var(--text);
 }
@@ -163,7 +159,7 @@ nav li:hover, .selected-link {
     border-bottom: 1px solid var(--blue);
 }
 
-/* home */
+/* Home */
 
 .home {
     display: grid;
@@ -202,16 +198,16 @@ nav li:hover, .selected-link {
 .about-me {
     min-height: 90vh;
     padding-top: 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
     align-items: center;
     font-size: 1.35rem;
     margin: 3rem 0;
 }
 
 .me-info {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 .about-me img {
@@ -402,7 +398,6 @@ footer {
 
     .about-me {
         min-height: auto;
-        display: flex;
         flex-direction: column;
         gap: 3rem;
     }
@@ -457,7 +452,6 @@ footer {
         gap: 2rem;
         justify-content: center;
         min-height: 100vh;
-        /* margin-bottom: 3rem; */
     }
 
     .contact h2 {
@@ -506,6 +500,10 @@ footer {
         font-size: 3.7rem;
     }
 
+    .about-me {
+        flex-direction: column;
+    }
+
     .about-me img {
         max-width: 400px;
     }
@@ -524,15 +522,21 @@ footer {
 
     .screenshot {
         width: 100%;
-        /* height: max(220px, 1fr); */
     }
-
-    /* .screenshot-link {
-        height: max(220px, 100%);
-    } */
 
     .screenshot:hover {
         box-shadow: none;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-left {
+        margin-bottom: 0;
     }
 
 }
