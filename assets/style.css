@@ -68,6 +68,7 @@ h2 {
 p {
     margin: 0;
     line-height: 1.5;
+    font-size: 1.2rem;
 }
 
 a {
@@ -281,6 +282,7 @@ nav li:hover, .selected-link {
 
 .description p {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .title-container {
