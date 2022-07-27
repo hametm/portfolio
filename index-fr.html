@@ -13,12 +13,12 @@
     <header>
         <nav>
             <ul>
-                <a id="home-link" href="#home"><li class="link">Morgan Hamet</li></a>
+                <a href="#home"><li id="home-link" class="link selected-link">Morgan Hamet</li></a>
                 <div class="right-side">
                     <div class="links">
-                        <a href="#about-me" id="about-me-link" ><li>Moi</li></a>
-                        <a href="#work" id="work-link" ><li>Mes Projets</li></a>
-                        <a href="#contact"id="contact-link" ><li>Contacter</li></a>
+                        <a href="#about-me" ><li id="about-me-link" class="link">À Propos de Moi</li></a>
+                        <a href="#work" ><li id="work-link" class="link">Mes Projets</li></a>
+                        <a href="#contact"><li id="contact-link" class="link">Contacter</li></a>
                     </div>
                     <div class="language">
                         <a href="./index.html">
@@ -35,7 +35,7 @@
     <main>
         <a id="home">
             <section class="home">
-                <h1>Salut! Je m'appelle <span class="emphasis">Morgan.</span>
+                <h1 id="hi">Salut! Je m'appelle <span class="emphasis">Morgan.</span>
                     Je m'intéresse au <span class="emphasis">développement web.</span>
                 </h1>
         </a>
@@ -43,11 +43,12 @@
         <a id="about-me">
             <section class="about-me">
                 <div class="me-info">
-                   <h2 id="about-me-header">Moi</h2>
-                   <p>Étant autrefois analyste en assurance qualité, je me concentre 
-                    de la convivialité. J'aime l'écriture, la conception, et les langues 
-                    étrangères, et je peux trouver une faute de frappe à un kilométre.
-                   </p>
+                   <h2 id="about-me-header">À Propos de Moi</h2>
+                    <p>En tant qu'ancien analyste en assurance qualité, je me concentre 
+                        sur la convivialité et le design. J'aime aussi les langues 
+                        étrangères et trouver les fautes de frappe.
+                    </p>
+                    <p>Voici mon <a href="./assets/resume.pdf" target="_blank">CV.</a></p>
                 </div>
                 <img src="./assets/images/headshot.png" alt="">
             </section>
@@ -59,63 +60,102 @@
             </a>
             <div class="projects">
                 <figure class="project">
-                    <div class="screenshot">-</div>
+                    <a class="screenshot-link" href="https://hametm.github.io/alphabet-store/" target="_blank">
+                        <img class="screenshot" src="./assets/images/alphabet-store.png" alt="Alphabet Store screenshot">
+                    </a>
                     <figcaption class="description">
                         <div class="title-container">
-                            <h3 class="title">Projet 1</h3>
-                            <a href="#"><img src="./assets/images/github-black.png" alt="github"></a>
+                            <h3 class="title">Le Magasin de l'Alphabet</h3>
+                            <a href="https://github.com/hametm/alphabet-store" target="_blank">
+                                <img src="./assets/images/github-black.png" alt="github">
+                            </a>
                         </div>
-                        <p>Description</p>
+                        <p>Les enfants l'adorent! Créé avec React, ce programme vous permet de faire du 
+                            shopping pour des lettres de l'alphabet.</p>
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <div class="screenshot">-</div>
+                    <a href="https://hametm.github.io/battleship/" target="_blank">                        
+                        <img class="screenshot" src="./assets/images/smileship.png" alt="Smileship screenshot">
+                    </a>
                     <figcaption class="description">
                         <div class="title-container">
-                            <h3 class="title">Projet 2</h3>
-                            <a href="#"><img src="./assets/images/github-black.png" alt="github"></a>
+                            <h3 class="title">Smileship</h3>
+                            <a href="https://github.com/hametm/battleship" target="_blank">
+                                <img src="./assets/images/github-black.png" alt="github">
+                            </a>
                         </div>
-                        <p>Description</p>
+                        <p>Une alternative paisible à Battleship, faite avec Webpack. L'utilisateur 
+                            joue contre l'ordinateur et essaie de trouver les sourires cachés sur son 
+                            plateau de jeu.
+                        </p>
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <div class="screenshot">-</div>
+                    <a href="https://hametm.github.io/owen-wilson-wow/" target="_blank">
+                        <img class="screenshot" src="./assets/images/owen-wilson.png" alt="Owen Wilson Says Wow screenshot">
+                    </a>
                     <figcaption class="description">
                         <div class="title-container">
-                            <h3 class="title">Projet 3</h3>
-                            <a href="#"><img src="./assets/images/github-black.png" alt="github"></a>
+                            <h3 class="title">Owen Wilson Dit &laquo; Wow &raquo;</h3>
+                            <a href="https://github.com/hametm/owen-wilson-wow" target="_blank">
+                                <img src="./assets/images/github-black.png" alt="github">
+                            </a>
                         </div>
-                        <p>Description</p>
+                        <p>Explorez le monde d'API avec Owen Wilson. Ce projet utilise une API 
+                            pour obtenir le titre, le directeur, le personnage, et l'occurrence des 
+                            temps que Owen Wilson a dit &laquo; Wow &raquo; dans un film.
+                        </p>
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <div class="screenshot">-</div>
+                    <a href="https://hametm.github.io/memory-card/" target="_blank">
+                        <img class="screenshot" src="./assets/images/memory-game.png" alt="Memory Game screenshot">
+                    </a>                    
                     <figcaption class="description">
                         <div class="title-container">
-                            <h3 class="title">Projet 4</h3>
-                            <a href="#"><img src="./assets/images/github-black.png" alt="github"></a>
+                            <h3 class="title">Jeu de Mémoire</h3>
+                            <a href="https://github.com/hametm/memory-card" target="_blank">
+                                <img src="./assets/images/github-black.png" alt="github">
+                            </a>
                         </div>
-                        <p>Description</p>
+                        <p>Vous l'avez vu. Vous le connaissez. Mais pouvez-vous vous souvenir 
+                            huit photos de lui? Nicolas Cage est la star de ce jeu de React qui traque 
+                            les cartes sur lesquelles vous avez cliqué.</p>
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <div class="screenshot">-</div>
+                    <a href="https://hametm.github.io/totdots/" target="_blank">
+                        <img class="screenshot" src="./assets/images/totdots.png" alt="Tot Dots screenshot">
+                    </a>
                     <figcaption class="description">
                         <div class="title-container">
-                            <h3 class="title">Project 5</h3>
-                            <a href="#"><img src="./assets/images/github-black.png" alt="github"></a>
+                            <h3 class="title">Les Pixels Mignons</h3>
+                            <a href="https://github.com/hametm/totdots" target="_blank">
+                                <img src="./assets/images/github-black.png" alt="github">
+                            </a>
                         </div>
-                        <p>Description</p>
+                        <p>Voici un programme amusant pour les enfants, inspiré du programme populaire 
+                            des années 1990, Kid Pix. L'utilisateur trace les couleurs, les motifs, et les 
+                            dinosaures sur une toile.
+                        </p>
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <div class="screenshot">-</div>
+                    <a href="https://hametm.github.io/calculator/" target="_blank">
+                        <img class="screenshot" src="./assets/images/calculator.png" alt="Cosmic Calculator screenshot">
+                    </a>
                     <figcaption class="description">
                         <div class="title-container">
-                            <h3 class="title">Projet 6</h3>
-                            <a href="#"><img src="./assets/images/github-black.png" alt="github"></a>
+                            <h3 class="title">Calculatrice Cosmique</h3>
+                            <a href="https://github.com/hametm/calculator" target="_blank">
+                                <img src="./assets/images/github-black.png" alt="github">
+                            </a>
                         </div>
-                        <p>Description</p>
+                        <p>Une calculatrice, une calculatrice seule, flottante rêveusement dans 
+                            la noirceur de l'espace. Voici une version conviviale d'une calculatrice 
+                            simple.
+                        </p>
                     </figcaption>
                 </figure>
             </div>
@@ -125,8 +165,8 @@
                 <a id="contact">
                     <h2 id="contact-header">Contacter</h2>
                 </a>
-                <p>Je veux voir le monde! Si vous avez une opportunité en dehors des États-Unis, 
-                    n'hésite pas de me contacter. Par ailleurs, je cherche les positions près de 
+                <p> Je veux voir le monde! Si vous avez une opportunité en dehors des États-Unis, 
+                    n'hésitez pas à me contacter. Par ailleurs, je cherche les postes proches de 
                     Boston, Seattle, ou Portland, ou le travail à distance.
                 </p>
                 <p>E-mail</p>
