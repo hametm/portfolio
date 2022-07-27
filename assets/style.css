@@ -198,7 +198,7 @@ nav li:hover, .selected-link {
 
 .about-me {
     min-height: 90vh;
-    padding-top: 4rem;
+    padding-top: 0rem;
     display: flex;
     flex-direction: row;
     gap: 5rem;
@@ -307,7 +307,7 @@ nav li:hover, .selected-link {
     grid-template-columns: 1.5fr 1fr;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .contact-left {
